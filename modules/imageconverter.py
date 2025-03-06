@@ -43,7 +43,8 @@ class ImageConverter:
 
                 resizedImage = getImage.resize(finalSize, Image.Resampling.LANCZOS)
 
-                getFileName = path.replace('./All\\', ' ')
+                getFileName = path.replace('./All/', '')
+                print(getFileName)
 
                 resizedImage.save('./Exports/' + getFileName, 'JPEG', optimize=True, quality=60)
         print("Operation is completed")
